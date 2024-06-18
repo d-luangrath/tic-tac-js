@@ -1,9 +1,24 @@
 console.log("hello index.js");
 
+let player = "X"
+
 function play() {
-    console.log("Square was clicked");
+    //switch turns
+
+    // if (player ==="X") {
+    //     player = "O";
+    // } else {
+    //     player = "X";
+    // }
+    
+    // ternary option
+    player = player === "X" ? "O" : "X";
+
+    const playerSpan = document.querySelector('#current-player');
+    playerSpan.innerText = player;
   }
   
+
   const squares = document.querySelectorAll('.square');
   
   for (const square of squares) {
