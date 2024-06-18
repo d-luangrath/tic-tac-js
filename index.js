@@ -2,7 +2,10 @@ console.log("hello index.js");
 
 let player = "X"
 
-function play() {
+function play(evt) {
+    const targetSq = evt.target;
+    targetSq.innerText = player
+
     //switch turns
 
     // if (player ==="X") {
@@ -11,13 +14,12 @@ function play() {
     //     player = "X";
     // }
     
-    // ternary option
+    // ternary operator
     player = player === "X" ? "O" : "X";
 
     const playerSpan = document.querySelector('#current-player');
     playerSpan.innerText = player;
   }
-  
 
   const squares = document.querySelectorAll('.square');
   
